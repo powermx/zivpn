@@ -9,9 +9,10 @@ UDP server installation for ZIVPN Tunnel (SSH/DNS) VPN app.
 
 `wget https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/zi.sh; chmod +x zi.sh; ./zi.sh`
 
-Download APP Here:
+Client App available:
 
 <a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer">Download APP on Playstore</a>
 > ZiVPN
                 
 ----
+Bash script by PowerMX
