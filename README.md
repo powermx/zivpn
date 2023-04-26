@@ -1,4 +1,4 @@
-![](https://github.com/powermx/dl/zi.png)
+![](https://github.com/powermx/dl/blob/master/zivpn.png)
 
 UDP server installation for ZIVPN Tunnel (SSH/DNS) VPN app.
 <br>
