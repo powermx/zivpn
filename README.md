@@ -11,7 +11,7 @@ UDP server installation for ZIVPN Tunnel (SSH/DNS) VPN app.
 
 Download APP Here:
 
-<a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer"> <img src="https://github.com/powermx/dl/playstore.png" alt="bash" width="100" height="50"/> </a> <a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer">
+<a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer"> <img src="https://github.com/powermx/dl/blob/master/playstore.png" alt="bash" width="100" height="50"/> </a> <a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer">
 > ZiVPN
                 
 ----
