@@ -36,8 +36,8 @@ NoNewPrivileges=true
 WantedBy=multi-user.target
 EOF
 
-echo -e "ZIVPN UDP Username/Password"
-read -p "Enter username, example: user1 (Press enter for Default 'zi'): " input_config
+echo -e "ZIVPN UDP Usernames/Passwords"
+read -p "Enter usernames separated by commas, example: user1,user2 (Press enter for Default 'zi'): " input_config
 
 if [ -n "$input_config" ]; then
     IFS=',' read -r -a config <<< "$input_config"
