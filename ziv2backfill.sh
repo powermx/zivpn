@@ -36,22 +36,13 @@ NoNewPrivileges=true
 WantedBy=multi-user.target
 EOF
 
-echo -e "ZIVPN UDP Username/Password"
-read -p "Enter username, example: user1 (Press enter for Default 'zi'): " input_config
+echo -e "ZIVPN UDP new Username/Password"
+read -p "Enter usernames/passwd separated by commas, example: user1,user2 (Press enter for Default 'zi'): " input_config
 
-if [ -n "$input_config" ]; then
-    IFS=',' read -r -a config <<< "$input_config"
-    if [ ${#config[@]} -eq 1 ]; then
-        config+=(${config[0]})
-    fi
-else
-    config=("zi")
-fi
+config=${input_config:-"zi"}
+configstr="\"config\": \"$config\""
+sed -i -E 's/"config":\s*"[^"]*"/'"$configstr"'/g' /etc/zivpn/config_backfill.json
 
-read -p "Enter the new password for 'zi': " new_password
-new_config_str="\"config\": [$(printf "\"%s\"," "${config[@]}" | sed 's/,$//')]"
-sed -i -E "s/\"config\": ?\[[[:space:]]*\"zi\"[[:space:]]*\]/${new_config_str}/g" /etc/zivpn/config_backfill.json
-sed -i -E "s/\"zi_password\": ?\"[^\"]*\"/\"zi_password\": \"$new_password\"/g" /etc/zivpn/config_backfill.json
 
 systemctl enable zivpn_backfill.service
 systemctl start zivpn_backfill.service
