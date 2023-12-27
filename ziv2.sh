@@ -1,4 +1,3 @@
-#!/bin/bash
 # Zivpn UDP Module installer v2 
 # Creator Zahid Islam
 
@@ -24,7 +23,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/etc/zivpn
-ExecStart=/usr/local/bin/zivpn -config /etc/zivpn/config.json server
+ExecStart=/usr/local/bin/zivpn -c /etc/zivpn/config.json server
 Restart=always
 RestartSec=3
 Environment=ZIVPN_LOG_LEVEL=info
