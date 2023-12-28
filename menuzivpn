@@ -19,7 +19,7 @@ while true; do
   if [ $(id -u) -eq 0 ]; then
     clear
   else
-    echo -e "Ejecute el script como usuario root"
+    echo -e "Run the script as root user"
     exit
   fi
 #installv1
