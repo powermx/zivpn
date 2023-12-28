@@ -23,7 +23,7 @@ while true; do
     exit
   fi
 #installv1
-function installv2(){
+function installv1(){
 echo -e "${RED} ────────────── /// ─────────────── "
 echo -e "${YELLOW}This option will install ZIVPN version 1, UDP port range will be 20000:50000 redirected to 5666"
 echo -e "${YELLOW}Continue?"
