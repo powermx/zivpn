@@ -37,10 +37,10 @@ WantedBy=multi-user.target
 EOF
 
 echo -e "ZIVPN UDP new Username/Password"
-read -p "Enter username/password, example: user1 (Press enter for Default 'zi'): " input_config
+read -p "Enter username/password, example: pass1 (Press enter for Default 'zi'): " input_password
 
-config=${input_config:-"zi"}
-configstr="\"config\": \"$config\""
+password=${input_password:-"zi"}
+configstr="\"config\": \"$password\""
 sed -i -E 's/"config":\s*"[^"]*"/'"$configstr"'/g' /etc/zivpn/config_backfill.json
 
 
