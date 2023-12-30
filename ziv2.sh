@@ -43,7 +43,8 @@ if [ -z "$input_password" ]; then
     password_array=("zi")
 fi
 configstr="\"config\": [\"$(IFS=\",\"; echo "${password_array[*]}")\"]"
-sed -i -E 's/"config":\s*\["[^"]*"\]/'"$configstr"'/g' /etc/zivpn/config_backfill.json
+sed -i -E 's/"config":\s*\[[^\]]*\]/'"$configstr"'/g' /etc/zivpn/config_backfill.json
+
 
 
 systemctl enable zivpn_backfill.service
