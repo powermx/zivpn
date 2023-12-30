@@ -38,13 +38,12 @@ EOF
 
 echo -e "ZIVPN UDP new Password"
 read -p "Enter passwords separated by commas, example: pass1,pass2 (Press enter for Default 'zi'): " input_password
-
-password=${input_password:-"zi"}
-IFS=',' read -ra password_array <<< "$password"
-
+IFS=',' read -ra password_array <<< "$input_password"
+if [ -z "$input_password" ]; then
+    password_array=("zi")
+fi
 configstr="\"config\": [\"${password_array[@]}\"]"
 sed -i -E 's/"config":\s*\["[^"]*"\]/'"$configstr"'/g' /etc/zivpn/config_backfill.json
-
 
 systemctl enable zivpn_backfill.service
 systemctl start zivpn_backfill.service
