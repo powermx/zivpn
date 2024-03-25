@@ -39,7 +39,7 @@ fi
 #installv2
 function installv2(){
 echo -e "${RED} ────────────── /// ─────────────── "
-echo -e "${YELLOW}This option will install ZIVPN version 2, UDP port range will be 6000:19999 redirected to 5667"
+echo -e "${YELLOW}This option will install ZIVPN version 2 AMD, UDP port range will be 6000:19999 redirected to 5667"
 echo -e "${YELLOW}Continue?"
 while [[ ${yesno} != @(s|S|y|Y|n|N) ]]; do
 read -p "[S/N]: " yesno
@@ -48,6 +48,20 @@ done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
 echo -e "${YELLOW}INSTALLING.."
 bash <(curl -fsSL https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/zi2.sh)
+fi
+}
+#installv3
+function installv3(){
+echo -e "${RED} ────────────── /// ─────────────── "
+echo -e "${YELLOW}This option will install ZIVPN version 2 ARM, UDP port range will be 6000:19999 redirected to 5667"
+echo -e "${YELLOW}Continue?"
+while [[ ${yesno} != @(s|S|y|Y|n|N) ]]; do
+read -p "[S/N]: " yesno
+tput cuu1 && tput dl1
+done
+if [[ ${yesno} = @(s|S|y|Y) ]]; then
+echo -e "${YELLOW}INSTALLING.."
+bash <(curl -fsSL https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/zi3.sh)
 fi
 }
 #uninstall
@@ -155,12 +169,13 @@ echo -e "${YELLOW} › ${WHITE}Network:${GREEN} $Network "
 echo -e "${YELLOW} › ${WHITE}Running:${GREEN} $ports "
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ────────────── /// ─────────────── "
 echo -e "${YELLOW}[${GREEN}1${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V1 (5666)
-${YELLOW}[${GREEN}2${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 (5667)
-${YELLOW}[${GREEN}3${YELLOW}] ${RED} › ${WHITE} UNINSTALL ZIVPN
+${YELLOW}[${GREEN}2${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 AMD (5667)
+${YELLOW}[${GREEN}3${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 ARM (5667)
+${YELLOW}[${GREEN}4${YELLOW}] ${RED} › ${WHITE} UNINSTALL ZIVPN
 ${YELLOW}[${GREEN} ${YELLOW}] ${RED} › ${WHITE} ────────
-${YELLOW}[${GREEN}4${YELLOW}] ${RED} › ${WHITE} START ZIVPN
-${YELLOW}[${GREEN}5${YELLOW}] ${RED} › ${WHITE} STOP ZIVPN
-${YELLOW}[${GREEN}6${YELLOW}] ${RED} › ${WHITE} RESTART ZIVPN
+${YELLOW}[${GREEN}5${YELLOW}] ${RED} › ${WHITE} START ZIVPN
+${YELLOW}[${GREEN}6${YELLOW}] ${RED} › ${WHITE} STOP ZIVPN
+${YELLOW}[${GREEN}7${YELLOW}] ${RED} › ${WHITE} RESTART ZIVPN
 ${YELLOW}[${GREEN}0${YELLOW}] ${RED} › ${WHITE} EXIT
 ${GRAY}[${RED}-${GRAY}]${RED} ────────────── /// ─────────────── "
 echo -e "${YELLOW} Δ CHOOSE AN OPTION:      ${YELLOW}"
@@ -174,13 +189,15 @@ case $option in
    installv1;;
   2 | 02 )
    installv2;;
-  3 | 03)
-   uninstall;;
+  3 | 03 )
+   installv3;;
   4 | 04)
-   startzivpn;;
+   uninstall;;
   5 | 05)
-   stopzivpn;;
+   startzivpn;;
   6 | 06)
+   stopzivpn;;
+  7 | 07)
    restartzivpn;;
   0)
   exit;;
