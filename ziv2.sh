@@ -1,5 +1,5 @@
 #!/bin/bash
-# Zivpn UDP Module installer
+# Zivpn UDP Module installer - AMD x64
 # Creator Zahid Islam
 
 echo -e "Updating server"
