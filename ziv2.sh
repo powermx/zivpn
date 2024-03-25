@@ -6,7 +6,7 @@ echo -e "Updating server"
 sudo apt-get update && apt-get upgrade -y
 systemctl stop zivpn_backfill.service 1> /dev/null 2> /dev/null
 echo -e "Downloading UDP Service"
-wget https://github.com/zahidbd2/udp-zivpn/releases/download/udp-zivpn_1.4.9/udp-zivpn-linux-amd64_backfill -O /usr/local/bin/zivpn_backfill 1> /dev/null 2> /dev/null
+wget https://github.com/zahidbd2/udp-zivpn/releases/download/udp-zivpn_1.4.9/udp-zivpn-linux-amd64 -O /usr/local/bin/zivpn_backfill 1> /dev/null 2> /dev/null
 chmod +x /usr/local/bin/zivpn_backfill
 mkdir /etc/zivpn 1> /dev/null 2> /dev/null
 wget https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/config_backfill.json -O /etc/zivpn/config_backfill.json 1> /dev/null 2> /dev/null
