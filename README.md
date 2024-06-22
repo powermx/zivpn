@@ -33,5 +33,5 @@ Client App available:
                 
 ----
 Bash script by PowerMX
-> Telegram : https://t.me/vpnmx
+> Telegram : https://t.me/vpnmx | 
 > Official Github: https://github.com/zahidbd2/udp-zivpn
