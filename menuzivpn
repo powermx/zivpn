@@ -168,8 +168,8 @@ echo -e "${YELLOW} › ${WHITE}IP:${GREEN} $IP "
 echo -e "${YELLOW} › ${WHITE}Network:${GREEN} $Network "
 echo -e "${YELLOW} › ${WHITE}Running:${GREEN} $ports "
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ────────────── /// ─────────────── "
-echo -e "${YELLOW}[${GREEN}1${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V1 (5666)
-${YELLOW}[${GREEN}2${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 AMD (5667)
+echo -e "${YELLOW}[${GREEN}1${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V1 (5666) [Discontinued]
+${YELLOW}[${GREEN}2${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 AMD (5667) [Recommended]
 ${YELLOW}[${GREEN}3${YELLOW}] ${RED} › ${WHITE} INSTALL ZIVPN V2 ARM (5667)
 ${YELLOW}[${GREEN}4${YELLOW}] ${RED} › ${WHITE} UNINSTALL ZIVPN
 ${YELLOW}[${GREEN} ${YELLOW}] ${RED} › ${WHITE} ────────
