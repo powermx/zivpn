@@ -75,7 +75,7 @@ tput cuu1 && tput dl1
 done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
 echo -e "${YELLOW}UNINSTALLING.."
-bash <(curl -fsSL https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/uninstall.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/powermx/zivpn/main/uninstall.sh)
 fi
 }
 #start
