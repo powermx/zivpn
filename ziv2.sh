@@ -1,6 +1,7 @@
 #!/bin/bash
 # Zivpn UDP Module installer - AMD x64
 # Creator Zahid Islam
+# Bash by PowerMX
 
 echo -e "Updating server"
 sudo apt-get update && apt-get upgrade -y
